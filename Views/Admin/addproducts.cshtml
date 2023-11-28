@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "addproducts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <script src="~/Content/assets/js/core/jquery.min.js"></script>
+    
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card card-chart">
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h5 class="card-category">Dashboard</h5>
+                        <h2 class="card-title">Adding Products</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div id="file-upload-form" class="uploader">
+                            <div id="file-drag">
+                                <img id="file-image" src="~/Content/assets/img/products/1.jpg" alt="Preview">
+                            </div>
+                        </div>
+                    </div>
+                    <form id="p-form" class="col-6">
+                        <div class="text-input">
+                            <label for="p-image" class="text-label">Image's URL:</label>
+                            <input type="text" class="text-field" placeholder="https://photos.google.com/photo/...."
+                                   name="p-image" id='p-image' required />
+                        </div>
+                        <div class="text-input">
+                            <label for="p-name" class="text-label">Product's name:</label>
+                            <input type="text" class="text-field" placeholder="Denim pant..." name="p-name" id='p-name'
+                                   required />
+                        </div>
+                        <div class="text-input">
+                            <label for="p-price" class="text-label">Product's price:</label>
+                            <input type="text" class="text-field" placeholder="$69" name="p-price" id='p-price' required />
+                        </div>
+                        <div class="text-input">
+                            <label for="p-categoryID" class="text-label">CategoryID:</label>
+                            <input type="text" class="text-field" placeholder="1" name="p-categoryID" id='p-categoryID' required />
+                        </div>
+                        <div class="text-input">
+                            <label for="p-desc" class="text-label">Product's description:</label>
+                            <textarea class="text-field" rows="10" placeholder="This product will bring about....."
+                                      name="p-desc" id='p-desc' required></textarea>
+                        </div>
+
+                        <button type="submit" class="site-btn submit-btn" id="btn_them">Submit Product's Information</button>
+                    </form>
+                    @*<form class="col-6">
+                            <div class="text-input">
+                                <label for="txt_URL" class="text-label">Image's URL:</label>
+                                <input type="text" class="text-field" placeholder="https://photos.google.com/photo/...."
+                                       name="txt_URL" id='txt_URL' required />
+                            </div>
+                            <div class="text-input">
+                                <label for="txt_prd-name" class="text-label">Product's name:</label>
+                                <input type="text" class="text-field" placeholder="Denim pant..." name="txt_prd-name" id='txt_prd-name'
+                                       required />
+                            </div>
+                            <div class="text-input">
+                                <label for="txt_CategoryID" class="text-label">CategoryID:</label>
+                                <input type="text" class="text-field" placeholder="Denim pant..." name="txt_CategoryID" id='txt_CategoryID'
+                                       required />
+                            </div>
+                            <div class="text-input">
+                                <label for="txt_prd-price" class="text-label">Product's price:</label>
+                                <input type="text" class="text-field" placeholder="$69" name="txt_prd-price" id='txt_prd-price' required />
+                            </div>
+                            <div class="text-input">
+                                <label for="txt_prd-desc" class="text-label">Product's description:</label>
+                                <textarea class="text-field" rows="10" placeholder="This product will bring about....."
+                                          name="p-desc" id='p-desc' required></textarea>
+                            </div>
+
+                            <input class="site-btn submit-btn" type="submit" id="btn_them" value="Submit Product's Information">
+                        </form>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
