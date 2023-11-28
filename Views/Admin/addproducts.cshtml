@@ -3,7 +3,7 @@
     ViewBag.Title = "addproducts";
     Layout = "~/Views/Shared/_Layout.cshtml";
     <script src="~/Content/assets/js/core/jquery.min.js"></script>
-    
+    <link href="~/Content/assets/css/uploader.css" rel="stylesheet" />
 }
 
 <div class="row">
@@ -18,15 +18,23 @@
                 </div>
             </div>
             <div class="card-body">
-                <div class="row">
+                <form id="product-form" class="row">
                     <div class="col-6">
                         <div id="file-upload-form" class="uploader">
-                            <div id="file-drag">
-                                <img id="file-image" src="~/Content/assets/img/products/1.jpg" alt="Preview">
-                            </div>
+                            <input id="file-upload" type="file" name="fileUpload" accept="image/*" required />
+
+                            <label for="file-upload" id="file-drag">
+                                <img id="file-image" src="#" alt="Preview" class="hidden">
+                                <div id="start">
+                                    <i class="fa fa-download" aria-hidden="true"></i>
+                                    <div>Select a file or drag here</div>
+                                    <div id="notimage" class="hidden">Please select an image</div>
+                                    <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+                                </div>
+                            </label>
                         </div>
                     </div>
-                    <form id="p-form" class="col-6">
+                    <div class="col-6">
                         <div class="text-input">
                             <label for="p-image" class="text-label">Image's URL:</label>
                             <input type="text" class="text-field" placeholder="https://photos.google.com/photo/...."
@@ -42,46 +50,14 @@
                             <input type="text" class="text-field" placeholder="$69" name="p-price" id='p-price' required />
                         </div>
                         <div class="text-input">
-                            <label for="p-categoryID" class="text-label">CategoryID:</label>
-                            <input type="text" class="text-field" placeholder="1" name="p-categoryID" id='p-categoryID' required />
-                        </div>
-                        <div class="text-input">
                             <label for="p-desc" class="text-label">Product's description:</label>
                             <textarea class="text-field" rows="10" placeholder="This product will bring about....."
                                       name="p-desc" id='p-desc' required></textarea>
                         </div>
+                        <input class="submit-btn" type="submit" value="Submit product's information">
+                    </div>
 
-                        <button type="submit" class="site-btn submit-btn" id="btn_them">Submit Product's Information</button>
-                    </form>
-                    @*<form class="col-6">
-                            <div class="text-input">
-                                <label for="txt_URL" class="text-label">Image's URL:</label>
-                                <input type="text" class="text-field" placeholder="https://photos.google.com/photo/...."
-                                       name="txt_URL" id='txt_URL' required />
-                            </div>
-                            <div class="text-input">
-                                <label for="txt_prd-name" class="text-label">Product's name:</label>
-                                <input type="text" class="text-field" placeholder="Denim pant..." name="txt_prd-name" id='txt_prd-name'
-                                       required />
-                            </div>
-                            <div class="text-input">
-                                <label for="txt_CategoryID" class="text-label">CategoryID:</label>
-                                <input type="text" class="text-field" placeholder="Denim pant..." name="txt_CategoryID" id='txt_CategoryID'
-                                       required />
-                            </div>
-                            <div class="text-input">
-                                <label for="txt_prd-price" class="text-label">Product's price:</label>
-                                <input type="text" class="text-field" placeholder="$69" name="txt_prd-price" id='txt_prd-price' required />
-                            </div>
-                            <div class="text-input">
-                                <label for="txt_prd-desc" class="text-label">Product's description:</label>
-                                <textarea class="text-field" rows="10" placeholder="This product will bring about....."
-                                          name="p-desc" id='p-desc' required></textarea>
-                            </div>
-
-                            <input class="site-btn submit-btn" type="submit" id="btn_them" value="Submit Product's Information">
-                        </form>*@
-                </div>
+                </form>
             </div>
         </div>
     </div>
